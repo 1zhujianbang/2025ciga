@@ -1,0 +1,210 @@
+{
+  "weatherSystem": {
+    "weatherTypes": [
+      {
+        "weatherID": "WEA001",
+        "weatherName": "Rain",
+        "weatherType": "Rain",
+        "intensity": 0.6,
+        "duration": 3,
+        "affectedResources": ["RES001", "RES006"],
+        "resourceModifiers": {
+          "RES001": 1.3,
+          "RES006": 1.2,
+          "RES002": 0.9
+        },
+        "eventModifiers": {
+          "disasterChance": 0.15,
+          "consciousnessChance": 0.05,
+          "floodChance": 0.2
+        },
+        "populationEffects": {
+          "satisfaction": 0.1,
+          "efficiency": 0.95
+        },
+        "description": "降雨天气，提升水资源和食物产量，但增加洪水风险"
+      },
+      {
+        "weatherID": "WEA002",
+        "weatherName": "Drought",
+        "weatherType": "Drought",
+        "intensity": 0.8,
+        "duration": 4,
+        "affectedResources": ["RES001", "RES006", "RES002"],
+        "resourceModifiers": {
+          "RES001": 0.6,
+          "RES006": 0.5,
+          "RES002": 0.8
+        },
+        "eventModifiers": {
+          "disasterChance": 0.25,
+          "consciousnessChance": 0.02,
+          "fireChance": 0.3
+        },
+        "populationEffects": {
+          "satisfaction": -0.2,
+          "efficiency": 0.9
+        },
+        "description": "干旱天气，大幅降低水资源和食物产量，增加火灾风险"
+      },
+      {
+        "weatherID": "WEA003",
+        "weatherName": "Storm",
+        "weatherType": "Storm",
+        "intensity": 0.9,
+        "duration": 2,
+        "affectedResources": ["RES001", "RES002", "RES003", "RES004", "RES005", "RES006", "RES007", "RES008"],
+        "resourceModifiers": {
+          "RES001": 0.7,
+          "RES002": 0.6,
+          "RES003": 0.8,
+          "RES004": 0.8,
+          "RES005": 0.9,
+          "RES006": 0.6,
+          "RES007": 0.8,
+          "RES008": 0.8
+        },
+        "eventModifiers": {
+          "disasterChance": 0.4,
+          "consciousnessChance": 0.03,
+          "buildingDamageChance": 0.25
+        },
+        "populationEffects": {
+          "satisfaction": -0.3,
+          "efficiency": 0.8
+        },
+        "description": "风暴天气，降低所有资源产量，增加灾害和建筑损坏风险"
+      },
+      {
+        "weatherID": "WEA004",
+        "weatherName": "Clear",
+        "weatherType": "Clear",
+        "intensity": 0.5,
+        "duration": 5,
+        "affectedResources": ["RES001", "RES002", "RES006"],
+        "resourceModifiers": {
+          "RES001": 1.1,
+          "RES002": 1.1,
+          "RES006": 1.15
+        },
+        "eventModifiers": {
+          "disasterChance": 0.05,
+          "consciousnessChance": 0.08,
+          "positiveEventChance": 0.1
+        },
+        "populationEffects": {
+          "satisfaction": 0.15,
+          "efficiency": 1.05
+        },
+        "description": "晴朗天气，提升资源产量和人口满意度"
+      },
+      {
+        "weatherID": "WEA005",
+        "weatherName": "Fog",
+        "weatherType": "Fog",
+        "intensity": 0.4,
+        "duration": 3,
+        "affectedResources": ["RES001", "RES002", "RES003", "RES004", "RES005"],
+        "resourceModifiers": {
+          "RES001": 0.95,
+          "RES002": 0.9,
+          "RES003": 0.85,
+          "RES004": 0.85,
+          "RES005": 0.9
+        },
+        "eventModifiers": {
+          "disasterChance": 0.08,
+          "consciousnessChance": 0.12,
+          "mysteryEventChance": 0.15
+        },
+        "populationEffects": {
+          "satisfaction": 0.05,
+          "efficiency": 0.95
+        },
+        "description": "雾霾天气，降低视野和资源产量，增加神秘事件概率"
+      },
+      {
+        "weatherID": "WEA006",
+        "weatherName": "Wind",
+        "weatherType": "Wind",
+        "intensity": 0.7,
+        "duration": 4,
+        "affectedResources": ["RES001", "RES002", "RES007", "RES008"],
+        "resourceModifiers": {
+          "RES001": 1.05,
+          "RES002": 0.9,
+          "RES007": 1.2,
+          "RES008": 1.1
+        },
+        "eventModifiers": {
+          "disasterChance": 0.12,
+          "consciousnessChance": 0.06,
+          "fireChance": 0.15
+        },
+        "populationEffects": {
+          "satisfaction": 0.05,
+          "efficiency": 1.02
+        },
+        "description": "大风天气，提升能源产量，但增加火灾风险"
+      }
+    ],
+    "weatherTransitionRules": [
+      {
+        "fromWeather": "Rain",
+        "toWeather": "Clear",
+        "probability": 0.4,
+        "minDuration": 2
+      },
+      {
+        "fromWeather": "Clear",
+        "toWeather": "Rain",
+        "probability": 0.3,
+        "minDuration": 3
+      },
+      {
+        "fromWeather": "Clear",
+        "toWeather": "Drought",
+        "probability": 0.15,
+        "minDuration": 5
+      },
+      {
+        "fromWeather": "Drought",
+        "toWeather": "Storm",
+        "probability": 0.2,
+        "minDuration": 3
+      },
+      {
+        "fromWeather": "Storm",
+        "toWeather": "Rain",
+        "probability": 0.6,
+        "minDuration": 1
+      }
+    ],
+    "seasonalEffects": {
+      "spring": {
+        "rainChance": 0.4,
+        "clearChance": 0.3,
+        "windChance": 0.2,
+        "fogChance": 0.1
+      },
+      "summer": {
+        "clearChance": 0.5,
+        "droughtChance": 0.2,
+        "stormChance": 0.2,
+        "windChance": 0.1
+      },
+      "autumn": {
+        "rainChance": 0.3,
+        "clearChance": 0.4,
+        "fogChance": 0.2,
+        "windChance": 0.1
+      },
+      "winter": {
+        "clearChance": 0.4,
+        "fogChance": 0.3,
+        "windChance": 0.2,
+        "rainChance": 0.1
+      }
+    }
+  }
+} 

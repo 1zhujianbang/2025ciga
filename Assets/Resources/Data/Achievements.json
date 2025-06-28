@@ -1,0 +1,525 @@
+{
+    "achievementSystem": {
+      "achievementCategories": [
+        {
+          "categoryID": "ACH001",
+          "categoryName": "HarmonyAchievements",
+          "categoryType": "Harmony",
+          "description": "和谐度相关成就",
+          "iconPath": "Sprites/Achievements/harmony",
+          "color": "#4CAF50"
+        },
+        {
+          "categoryID": "ACH002",
+          "categoryName": "ResourceAchievements",
+          "categoryType": "Resource",
+          "description": "资源管理相关成就",
+          "iconPath": "Sprites/Achievements/resource",
+          "color": "#FF9800"
+        },
+        {
+          "categoryID": "ACH003",
+          "categoryName": "TechnologyAchievements",
+          "categoryType": "Technology",
+          "description": "科技发展相关成就",
+          "iconPath": "Sprites/Achievements/technology",
+          "color": "#2196F3"
+        },
+        {
+          "categoryID": "ACH004",
+          "categoryName": "EnvironmentalAchievements",
+          "categoryType": "Environment",
+          "description": "环境保护相关成就",
+          "iconPath": "Sprites/Achievements/environment",
+          "color": "#8BC34A"
+        },
+        {
+          "categoryID": "ACH005",
+          "categoryName": "DiplomaticAchievements",
+          "categoryType": "Diplomacy",
+          "description": "外交关系相关成就",
+          "iconPath": "Sprites/Achievements/diplomacy",
+          "color": "#9C27B0"
+        },
+        {
+          "categoryID": "ACH006",
+          "categoryName": "PopulationAchievements",
+          "categoryType": "Population",
+          "description": "人口管理相关成就",
+          "iconPath": "Sprites/Achievements/population",
+          "color": "#E91E63"
+        },
+        {
+          "categoryID": "ACH007",
+          "categoryName": "SurvivalAchievements",
+          "categoryType": "Survival",
+          "description": "生存挑战相关成就",
+          "iconPath": "Sprites/Achievements/survival",
+          "color": "#F44336"
+        },
+        {
+          "categoryID": "ACH008",
+          "categoryName": "MasteryAchievements",
+          "categoryType": "Mastery",
+          "description": "精通技能相关成就",
+          "iconPath": "Sprites/Achievements/mastery",
+          "color": "#FFD700"
+        }
+      ],
+      "achievements": [
+        {
+          "achievementID": "ACH001",
+          "achievementName": "PeacefulCoexistence",
+          "categoryID": "ACH001",
+          "achievementType": "Harmony",
+          "difficulty": "Bronze",
+          "description": "与所有自然元素建立友好关系",
+          "requirements": {
+            "harmonyLevel": 0.7,
+            "elementCount": 4,
+            "duration": 20
+          },
+          "rewards": {
+            "harmonyBonus": 0.1,
+            "diplomaticCredits": 50,
+            "experience": 100
+          },
+          "iconPath": "Sprites/Achievements/peaceful_coexistence"
+        },
+        {
+          "achievementID": "ACH002",
+          "achievementName": "NatureAlliance",
+          "categoryID": "ACH001",
+          "achievementType": "Harmony",
+          "difficulty": "Silver",
+          "description": "与所有自然元素建立联盟关系",
+          "requirements": {
+            "harmonyLevel": 0.9,
+            "elementCount": 4,
+            "duration": 50
+          },
+          "rewards": {
+            "harmonyBonus": 0.2,
+            "diplomaticCredits": 100,
+            "experience": 250,
+            "specialAbility": "NatureCommunication"
+          },
+          "iconPath": "Sprites/Achievements/nature_alliance"
+        },
+        {
+          "achievementID": "ACH003",
+          "achievementName": "ResourceMaster",
+          "categoryID": "ACH002",
+          "achievementType": "Resource",
+          "difficulty": "Bronze",
+          "description": "所有资源储量达到最大值的80%",
+          "requirements": {
+            "resourceTypes": 8,
+            "storagePercentage": 0.8
+          },
+          "rewards": {
+            "storageBonus": 0.2,
+            "resourceEfficiency": 0.1,
+            "experience": 150
+          },
+          "iconPath": "Sprites/Achievements/resource_master"
+        },
+        {
+          "achievementID": "ACH004",
+          "achievementName": "SustainableEconomy",
+          "categoryID": "ACH002",
+          "achievementType": "Resource",
+          "difficulty": "Gold",
+          "description": "维持可持续经济100回合",
+          "requirements": {
+            "sustainabilityScore": 0.8,
+            "duration": 100,
+            "resourceBalance": 0.9
+          },
+          "rewards": {
+            "sustainabilityBonus": 0.3,
+            "resourceRegeneration": 0.2,
+            "experience": 500,
+            "specialAbility": "ResourceConservation"
+          },
+          "iconPath": "Sprites/Achievements/sustainable_economy"
+        },
+        {
+          "achievementID": "ACH005",
+          "achievementName": "TechPioneer",
+          "categoryID": "ACH003",
+          "achievementType": "Technology",
+          "difficulty": "Bronze",
+          "description": "解锁所有基础技术",
+          "requirements": {
+            "technologyLevel": 2,
+            "technologyCount": 5
+          },
+          "rewards": {
+            "researchSpeed": 0.2,
+            "knowledgeGain": 0.1,
+            "experience": 200
+          },
+          "iconPath": "Sprites/Achievements/tech_pioneer"
+        },
+        {
+          "achievementID": "ACH006",
+          "achievementName": "InnovationLeader",
+          "categoryID": "ACH003",
+          "achievementType": "Technology",
+          "difficulty": "Platinum",
+          "description": "达到最高技术等级",
+          "requirements": {
+            "technologyLevel": 5,
+            "allTechnologies": true
+          },
+          "rewards": {
+            "researchSpeed": 0.5,
+            "technologyEfficiency": 0.3,
+            "experience": 1000,
+            "specialAbility": "TechnologicalMastery"
+          },
+          "iconPath": "Sprites/Achievements/innovation_leader"
+        },
+        {
+          "achievementID": "ACH007",
+          "achievementName": "EnvironmentalGuardian",
+          "categoryID": "ACH004",
+          "achievementType": "Environment",
+          "difficulty": "Silver",
+          "description": "环境质量达到优秀水平",
+          "requirements": {
+            "environmentalQuality": 0.8,
+            "pollutionLevel": 0.1,
+            "duration": 30
+          },
+          "rewards": {
+            "environmentalBonus": 0.2,
+            "populationSatisfaction": 0.1,
+            "experience": 300
+          },
+          "iconPath": "Sprites/Achievements/environmental_guardian"
+        },
+        {
+          "achievementID": "ACH008",
+          "achievementName": "EcoParadise",
+          "categoryID": "ACH004",
+          "achievementType": "Environment",
+          "difficulty": "Diamond",
+          "description": "创造完美的生态环境",
+          "requirements": {
+            "environmentalQuality": 0.95,
+            "biodiversityIndex": 0.9,
+            "sustainabilityScore": 0.9,
+            "duration": 100
+          },
+          "rewards": {
+            "environmentalBonus": 0.5,
+            "populationSatisfaction": 0.3,
+            "experience": 1500,
+            "specialAbility": "EnvironmentalHarmony"
+          },
+          "iconPath": "Sprites/Achievements/eco_paradise"
+        },
+        {
+          "achievementID": "ACH009",
+          "achievementName": "DiplomaticMaster",
+          "categoryID": "ACH005",
+          "achievementType": "Diplomacy",
+          "difficulty": "Gold",
+          "description": "与所有自然元素签署联盟协议",
+          "requirements": {
+            "allianceCount": 4,
+            "diplomaticLevel": 5,
+            "trustLevel": 0.8
+          },
+          "rewards": {
+            "diplomaticSuccess": 0.3,
+            "treatyPoints": 100,
+            "experience": 600,
+            "specialAbility": "DiplomaticGenius"
+          },
+          "iconPath": "Sprites/Achievements/diplomatic_master"
+        },
+        {
+          "achievementID": "ACH010",
+          "achievementName": "PopulationHaven",
+          "categoryID": "ACH006",
+          "achievementType": "Population",
+          "difficulty": "Silver",
+          "description": "人口满意度达到最高水平",
+          "requirements": {
+            "populationSatisfaction": 0.9,
+            "populationCount": 50,
+            "duration": 20
+          },
+          "rewards": {
+            "populationGrowth": 0.2,
+            "efficiencyBonus": 0.15,
+            "experience": 400
+          },
+          "iconPath": "Sprites/Achievements/population_haven"
+        },
+        {
+          "achievementID": "ACH011",
+          "achievementName": "DisasterSurvivor",
+          "categoryID": "ACH007",
+          "achievementType": "Survival",
+          "difficulty": "Bronze",
+          "description": "成功应对一次重大灾害",
+          "requirements": {
+            "disasterType": "Major",
+            "survivalRate": 0.8,
+            "recoveryTime": 10
+          },
+          "rewards": {
+            "disasterResistance": 0.1,
+            "experience": 200
+          },
+          "iconPath": "Sprites/Achievements/disaster_survivor"
+        },
+        {
+          "achievementID": "ACH012",
+          "achievementName": "Unbreakable",
+          "categoryID": "ACH007",
+          "achievementType": "Survival",
+          "difficulty": "Legendary",
+          "description": "在极端条件下生存100回合",
+          "requirements": {
+            "extremeConditions": true,
+            "survivalDuration": 100,
+            "populationStability": 0.7
+          },
+          "rewards": {
+            "disasterResistance": 0.5,
+            "adaptability": 0.3,
+            "experience": 2000,
+            "specialAbility": "UnbreakableSpirit"
+          },
+          "iconPath": "Sprites/Achievements/unbreakable"
+        },
+        {
+          "achievementID": "ACH013",
+          "achievementName": "ElementMaster",
+          "categoryID": "ACH008",
+          "achievementType": "Mastery",
+          "difficulty": "Diamond",
+          "description": "完全掌握一个自然元素",
+          "requirements": {
+            "elementMastery": 1.0,
+            "harmonyLevel": 1.0,
+            "diplomaticLevel": 6
+          },
+          "rewards": {
+            "elementControl": 0.5,
+            "specialAbilities": 1,
+            "experience": 1200,
+            "specialAbility": "ElementMastery"
+          },
+          "iconPath": "Sprites/Achievements/element_master"
+        },
+        {
+          "achievementID": "ACH014",
+          "achievementName": "ConsciousnessAwakened",
+          "categoryID": "ACH008",
+          "achievementType": "Mastery",
+          "difficulty": "Mythic",
+          "description": "觉醒所有建筑意识",
+          "requirements": {
+            "consciousnessBuildings": 10,
+            "consciousnessLevel": 5,
+            "spiritEnergy": 1000
+          },
+          "rewards": {
+            "consciousnessBonus": 0.5,
+            "spiritEnergyEfficiency": 0.4,
+            "experience": 3000,
+            "specialAbility": "ConsciousnessMastery"
+          },
+          "iconPath": "Sprites/Achievements/consciousness_awakened"
+        }
+      ],
+      "scoringSystem": {
+        "scoreCategories": [
+          {
+            "categoryID": "SCORE001",
+            "categoryName": "HarmonyScore",
+            "categoryType": "Harmony",
+            "weight": 0.25,
+            "maxScore": 1000,
+            "calculation": {
+              "baseScore": "averageHarmony * 500",
+              "bonusScore": "allianceCount * 100",
+              "penaltyScore": "conflictCount * -50"
+            }
+          },
+          {
+            "categoryID": "SCORE002",
+            "categoryName": "ResourceScore",
+            "categoryType": "Resource",
+            "weight": 0.20,
+            "maxScore": 1000,
+            "calculation": {
+              "baseScore": "resourceEfficiency * 400",
+              "bonusScore": "sustainabilityScore * 300",
+              "penaltyScore": "resourceWaste * -100"
+            }
+          },
+          {
+            "categoryID": "SCORE003",
+            "categoryName": "TechnologyScore",
+            "categoryType": "Technology",
+            "weight": 0.15,
+            "maxScore": 1000,
+            "calculation": {
+              "baseScore": "technologyLevel * 150",
+              "bonusScore": "researchSpeed * 200",
+              "penaltyScore": "technologyGap * -50"
+            }
+          },
+          {
+            "categoryID": "SCORE004",
+            "categoryName": "EnvironmentalScore",
+            "categoryType": "Environment",
+            "weight": 0.20,
+            "maxScore": 1000,
+            "calculation": {
+              "baseScore": "environmentalQuality * 500",
+              "bonusScore": "biodiversityIndex * 300",
+              "penaltyScore": "pollutionLevel * -200"
+            }
+          },
+          {
+            "categoryID": "SCORE005",
+            "categoryName": "PopulationScore",
+            "categoryType": "Population",
+            "weight": 0.10,
+            "maxScore": 1000,
+            "calculation": {
+              "baseScore": "populationSatisfaction * 400",
+              "bonusScore": "populationGrowth * 300",
+              "penaltyScore": "populationDecline * -100"
+            }
+          },
+          {
+            "categoryID": "SCORE006",
+            "categoryName": "SurvivalScore",
+            "categoryType": "Survival",
+            "weight": 0.10,
+            "maxScore": 1000,
+            "calculation": {
+              "baseScore": "survivalRate * 600",
+              "bonusScore": "disasterResistance * 200",
+              "penaltyScore": "disasterDamage * -100"
+            }
+          }
+        ],
+        "scoreLevels": [
+          {
+            "levelID": "SCOREL001",
+            "levelName": "Novice",
+            "scoreRange": [0, 2000],
+            "grade": "F",
+            "description": "新手水平，需要更多练习"
+          },
+          {
+            "levelID": "SCOREL002",
+            "levelName": "Apprentice",
+            "scoreRange": [2001, 4000],
+            "grade": "D",
+            "description": "学徒水平，基础掌握"
+          },
+          {
+            "levelID": "SCOREL003",
+            "levelName": "Adept",
+            "scoreRange": [4001, 6000],
+            "grade": "C",
+            "description": "熟练水平，良好表现"
+          },
+          {
+            "levelID": "SCOREL004",
+            "levelName": "Expert",
+            "scoreRange": [6001, 8000],
+            "grade": "B",
+            "description": "专家水平，优秀表现"
+          },
+          {
+            "levelID": "SCOREL005",
+            "levelName": "Master",
+            "scoreRange": [8001, 9500],
+            "grade": "A",
+            "description": "大师水平，卓越表现"
+          },
+          {
+            "levelID": "SCOREL006",
+            "levelName": "Legend",
+            "scoreRange": [9501, 10000],
+            "grade": "S",
+            "description": "传奇水平，完美表现"
+          }
+        ]
+      },
+      "achievementRewards": {
+        "rewardTypes": [
+          {
+            "rewardID": "REW001",
+            "rewardName": "ExperiencePoints",
+            "rewardType": "Experience",
+            "description": "经验点数，用于提升等级"
+          },
+          {
+            "rewardID": "REW002",
+            "rewardName": "ResourceBonus",
+            "rewardType": "Resource",
+            "description": "资源产量加成"
+          },
+          {
+            "rewardID": "REW003",
+            "rewardName": "SpecialAbility",
+            "rewardType": "Ability",
+            "description": "特殊能力解锁"
+          },
+          {
+            "rewardID": "REW004",
+            "rewardName": "DiplomaticCredits",
+            "rewardType": "Diplomatic",
+            "description": "外交信用点数"
+          },
+          {
+            "rewardID": "REW005",
+            "rewardName": "TechnologyUnlock",
+            "rewardType": "Technology",
+            "description": "技术解锁"
+          },
+          {
+            "rewardID": "REW006",
+            "rewardName": "BuildingUnlock",
+            "rewardType": "Building",
+            "description": "建筑解锁"
+          }
+        ]
+      },
+      "achievementTracking": {
+        "trackingTypes": [
+          {
+            "trackingID": "TRACK001",
+            "trackingName": "ProgressTracking",
+            "trackingType": "Progress",
+            "description": "进度追踪，显示完成百分比"
+          },
+          {
+            "trackingID": "TRACK002",
+            "trackingName": "TimeTracking",
+            "trackingType": "Time",
+            "description": "时间追踪，记录完成时间"
+          },
+          {
+            "trackingID": "TRACK003",
+            "trackingName": "ConditionTracking",
+            "trackingType": "Condition",
+            "description": "条件追踪，监控达成条件"
+          }
+        ]
+      }
+    }
+  }

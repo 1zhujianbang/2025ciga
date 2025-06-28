@@ -1,0 +1,463 @@
+{
+  "diplomacy": [
+    {
+      "diplomacyID": "DIP001",
+      "elementID": "NAT001",
+      "diplomacyLevel": 3,
+      "relationshipValue": 0.7,
+      "trustLevel": 0.6,
+      "agreementType": "Protection",
+      "agreementDuration": 360,
+      "resourceBonus": 0.1,
+      "environmentalBonus": 0.2,
+      "populationBonus": 0.05,
+      "description": "与河流的保护协议，改善水资源供应",
+      "iconPath": "Sprites/Diplomacy/river_protection",
+      "getEffects": [
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES001",
+          "boostValue": 0.15,
+          "description": "水资源产量提升15%"
+        },
+        {
+          "effectType": "RegenerationBoost",
+          "targetResource": "RES001",
+          "boostValue": 0.1,
+          "description": "水资源再生速率提升10%"
+        },
+        {
+          "effectType": "HarmonyGain",
+          "gainValue": 2,
+          "description": "每回合获得2点和谐度"
+        }
+      ]
+    },
+    {
+      "diplomacyID": "DIP002",
+      "elementID": "NAT001",
+      "diplomacyLevel": 4,
+      "relationshipValue": 0.8,
+      "trustLevel": 0.7,
+      "agreementType": "Cooperation",
+      "agreementDuration": 420,
+      "resourceBonus": 0.15,
+      "environmentalBonus": 0.25,
+      "populationBonus": 0.08,
+      "description": "与河流的合作协议，共同开发水资源",
+      "iconPath": "Sprites/Diplomacy/river_cooperation",
+      "gs": [
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES001",
+          "boostValue": 0.25,
+          "description": "水资源产量提升25%"
+        },
+        {
+          "effectType": "RegenerationBoost",
+          "targetResource": "RES001",
+          "boostValue": 0.2,
+          "description": "水资源再生速率提升20%"
+        },
+        {
+          "effectType": "HarmonyGain",
+          "gainValue": 3,
+          "description": "每回合获得3点和谐度"
+        },
+        {
+          "effectType": "KnowledgeGain",
+          "gainValue": 1,
+          "description": "每回合获得1点知识"
+        }
+      ]
+    },
+    {
+      "diplomacyID": "DIP003",
+      "elementID": "NAT001",
+      "diplomacyLevel": 5,
+      "relationshipValue": 0.9,
+      "trustLevel": 0.8,
+      "agreementType": "Alliance",
+      "agreementDuration": 720,
+      "resourceBonus": 0.2,
+      "environmentalBonus": 0.3,
+      "populationBonus": 0.1,
+      "description": "与河流的联盟关系，深度合作",
+      "iconPath": "Sprites/Diplomacy/river_alliance",
+      "gs": [
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES001",
+          "boostValue": 0.4,
+          "description": "水资源产量提升40%"
+        },
+        {
+          "effectType": "RegenerationBoost",
+          "targetResource": "RES001",
+          "boostValue": 0.3,
+          "description": "水资源再生速率提升30%"
+        },
+        {
+          "effectType": "HarmonyGain",
+          "gainValue": 5,
+          "description": "每回合获得5点和谐度"
+        },
+        {
+          "effectType": "KnowledgeGain",
+          "gainValue": 2,
+          "description": "每回合获得2点知识"
+        },
+        {
+          "effectType": "InfluenceGain",
+          "gainValue": 1,
+          "description": "每回合获得1点影响力"
+        },
+        {
+          "effectType": "DiplomaticCreditsGain",
+          "gainValue": 1,
+          "description": "每回合获得1点外交信用"
+        }
+      ]
+    },
+    {
+      "diplomacyID": "DIP004",
+      "elementID": "NAT004",
+      "diplomacyLevel": 3,
+      "relationshipValue": 0.65,
+      "trustLevel": 0.55,
+      "agreementType": "Protection",
+      "agreementDuration": 360,
+      "resourceBonus": 0.08,
+      "environmentalBonus": 0.25,
+      "populationBonus": 0.06,
+      "description": "与森林的保护协议，改善木材供应",
+      "iconPath": "Sprites/Diplomacy/forest_protection",
+      "gs": [
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES002",
+          "boostValue": 0.12,
+          "description": "木材产量提升12%"
+        },
+        {
+          "effectType": "RegenerationBoost",
+          "targetResource": "RES002",
+          "boostValue": 0.08,
+          "description": "木材再生速率提升8%"
+        },
+        {
+          "effectType": "HarmonyGain",
+          "gainValue": 2,
+          "description": "每回合获得2点和谐度"
+        }
+      ]
+    },
+    {
+      "diplomacyID": "DIP005",
+      "elementID": "NAT004",
+      "diplomacyLevel": 4,
+      "relationshipValue": 0.75,
+      "trustLevel": 0.65,
+      "agreementType": "Cooperation",
+      "agreementDuration": 480,
+      "resourceBonus": 0.12,
+      "environmentalBonus": 0.3,
+      "populationBonus": 0.08,
+      "description": "与森林的合作协议，共同研究生态",
+      "iconPath": "Sprites/Diplomacy/forest_cooperation",
+      "gs": [
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES002",
+          "boostValue": 0.2,
+          "description": "木材产量提升20%"
+        },
+        {
+          "effectType": "RegenerationBoost",
+          "targetResource": "RES002",
+          "boostValue": 0.15,
+          "description": "木材再生速率提升15%"
+        },
+        {
+          "effectType": "HarmonyGain",
+          "gainValue": 3,
+          "description": "每回合获得3点和谐度"
+        },
+        {
+          "effectType": "KnowledgeGain",
+          "gainValue": 1,
+          "description": "每回合获得1点知识"
+        }
+      ]
+    },
+    {
+      "diplomacyID": "DIP006",
+      "elementID": "NAT004",
+      "diplomacyLevel": 5,
+      "relationshipValue": 0.85,
+      "trustLevel": 0.75,
+      "agreementType": "Alliance",
+      "agreementDuration": 720,
+      "resourceBonus": 0.15,
+      "environmentalBonus": 0.35,
+      "populationBonus": 0.1,
+      "description": "与森林的联盟关系，生态和谐",
+      "iconPath": "Sprites/Diplomacy/forest_alliance",
+      "gs": [
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES002",
+          "boostValue": 0.35,
+          "description": "木材产量提升35%"
+        },
+        {
+          "effectType": "RegenerationBoost",
+          "targetResource": "RES002",
+          "boostValue": 0.25,
+          "description": "木材再生速率提升25%"
+        },
+        {
+          "effectType": "HarmonyGain",
+          "gainValue": 5,
+          "description": "每回合获得5点和谐度"
+        },
+        {
+          "effectType": "KnowledgeGain",
+          "gainValue": 2,
+          "description": "每回合获得2点知识"
+        },
+        {
+          "effectType": "AllianceStrengthGain",
+          "gainValue": 1,
+          "description": "每回合获得1点联盟强度"
+        }
+      ]
+    },
+    {
+      "diplomacyID": "DIP007",
+      "elementID": "NAT007",
+      "diplomacyLevel": 3,
+      "relationshipValue": 0.6,
+      "trustLevel": 0.5,
+      "agreementType": "Protection",
+      "agreementDuration": 360,
+      "resourceBonus": 0.1,
+      "environmentalBonus": 0.15,
+      "populationBonus": 0.04,
+      "description": "与山脉的保护协议，改善矿物供应",
+      "iconPath": "Sprites/Diplomacy/mountain_protection",
+      "gs": [
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES003",
+          "boostValue": 0.15,
+          "description": "铁矿产量提升15%"
+        },
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES004",
+          "boostValue": 0.1,
+          "description": "铜矿产量提升10%"
+        },
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES005",
+          "boostValue": 0.05,
+          "description": "金矿产量提升5%"
+        },
+        {
+          "effectType": "HarmonyGain",
+          "gainValue": 1,
+          "description": "每回合获得1点和谐度"
+        }
+      ]
+    },
+    {
+      "diplomacyID": "DIP008",
+      "elementID": "NAT007",
+      "diplomacyLevel": 4,
+      "relationshipValue": 0.7,
+      "trustLevel": 0.6,
+      "agreementType": "Cooperation",
+      "agreementDuration": 540,
+      "resourceBonus": 0.15,
+      "environmentalBonus": 0.2,
+      "populationBonus": 0.06,
+      "description": "与山脉的合作协议，共同研究地质",
+      "iconPath": "Sprites/Diplomacy/mountain_cooperation",
+      "gs": [
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES003",
+          "boostValue": 0.25,
+          "description": "铁矿产量提升25%"
+        },
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES004",
+          "boostValue": 0.2,
+          "description": "铜矿产量提升20%"
+        },
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES005",
+          "boostValue": 0.1,
+          "description": "金矿产量提升10%"
+        },
+        {
+          "effectType": "HarmonyGain",
+          "gainValue": 2,
+          "description": "每回合获得2点和谐度"
+        },
+        {
+          "effectType": "KnowledgeGain",
+          "gainValue": 1,
+          "description": "每回合获得1点知识"
+        }
+      ]
+    },
+    {
+      "diplomacyID": "DIP009",
+      "elementID": "NAT007",
+      "diplomacyLevel": 5,
+      "relationshipValue": 0.8,
+      "trustLevel": 0.7,
+      "agreementType": "Alliance",
+      "agreementDuration": 840,
+      "resourceBonus": 0.2,
+      "environmentalBonus": 0.25,
+      "populationBonus": 0.08,
+      "description": "与山脉的联盟关系，地质稳定",
+      "iconPath": "Sprites/Diplomacy/mountain_alliance",
+      "gs": [
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES003",
+          "boostValue": 0.4,
+          "description": "铁矿产量提升40%"
+        },
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES004",
+          "boostValue": 0.35,
+          "description": "铜矿产量提升35%"
+        },
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES005",
+          "boostValue": 0.2,
+          "description": "金矿产量提升20%"
+        },
+        {
+          "effectType": "HarmonyGain",
+          "gainValue": 3,
+          "description": "每回合获得3点和谐度"
+        },
+        {
+          "effectType": "KnowledgeGain",
+          "gainValue": 2,
+          "description": "每回合获得2点知识"
+        },
+        {
+          "effectType": "AllianceStrengthGain",
+          "gainValue": 1,
+          "description": "每回合获得1点联盟强度"
+        }
+      ]
+    },
+    {
+      "diplomacyID": "DIP010",
+      "elementID": "NAT010",
+      "diplomacyLevel": 2,
+      "relationshipValue": 0.4,
+      "trustLevel": 0.3,
+      "agreementType": "Research",
+      "agreementDuration": 900,
+      "resourceBonus": 0.05,
+      "environmentalBonus": 0.1,
+      "populationBonus": 0.02,
+      "description": "与火山的研究协议，了解火山活动",
+      "iconPath": "Sprites/Diplomacy/volcano_research",
+      "gs": [
+        {
+          "effectType": "KnowledgeGain",
+          "gainValue": 2,
+          "description": "每回合获得2点知识"
+        },
+        {
+          "effectType": "SpiritEnergyGain",
+          "gainValue": 1,
+          "description": "每回合获得1点灵能"
+        }
+      ]
+    },
+    {
+      "diplomacyID": "DIP011",
+      "elementID": "NAT010",
+      "diplomacyLevel": 3,
+      "relationshipValue": 0.5,
+      "trustLevel": 0.4,
+      "agreementType": "Control",
+      "agreementDuration": 1200,
+      "resourceBonus": 0.1,
+      "environmentalBonus": 0.15,
+      "populationBonus": 0.04,
+      "description": "与火山的控制协议，减少火山威胁",
+      "iconPath": "Sprites/Diplomacy/volcano_control",
+      "gs": [
+        {
+          "effectType": "KnowledgeGain",
+          "gainValue": 3,
+          "description": "每回合获得3点知识"
+        },
+        {
+          "effectType": "SpiritEnergyGain",
+          "gainValue": 2,
+          "description": "每回合获得2点灵能"
+        },
+        {
+          "effectType": "InfluenceGain",
+          "gainValue": 1,
+          "description": "每回合获得1点影响力"
+        }
+      ]
+    },
+    {
+      "diplomacyID": "DIP012",
+      "elementID": "NAT010",
+      "diplomacyLevel": 4,
+      "relationshipValue": 0.6,
+      "trustLevel": 0.5,
+      "agreementType": "Partnership",
+      "agreementDuration": 1440,
+      "resourceBonus": 0.15,
+      "environmentalBonus": 0.2,
+      "populationBonus": 0.06,
+      "description": "与火山的伙伴关系，利用地热能源",
+      "iconPath": "Sprites/Diplomacy/volcano_partnership",
+      "gs": [
+        {
+          "effectType": "KnowledgeGain",
+          "gainValue": 4,
+          "description": "每回合获得4点知识"
+        },
+        {
+          "effectType": "SpiritEnergyGain",
+          "gainValue": 3,
+          "description": "每回合获得3点灵能"
+        },
+        {
+          "effectType": "InfluenceGain",
+          "gainValue": 2,
+          "description": "每回合获得2点影响力"
+        },
+        {
+          "effectType": "ResourceBoost",
+          "targetResource": "RES007",
+          "boostValue": 0.2,
+          "description": "煤炭产量提升20%"
+        }
+      ]
+    }
+  ]
+} 

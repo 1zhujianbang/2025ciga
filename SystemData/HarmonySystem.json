@@ -1,0 +1,255 @@
+{
+  "harmonySystem": {
+    "harmonyLevels": [
+      {
+        "levelID": "HAR001",
+        "levelName": "Hostile",
+        "harmonyRange": [0.0, 0.2],
+        "relationshipLevel": "Hostile",
+        "resourceBoost": 0.5,
+        "eventChance": 0.4,
+        "diplomaticSuccess": 0.1,
+        "conflictChance": 0.3,
+        "populationEffects": {
+          "satisfaction": -0.3,
+          "efficiency": 0.7
+        },
+        "description": "敌对关系，资源产量大幅下降，高冲突概率"
+      },
+      {
+        "levelID": "HAR002",
+        "levelName": "Tense",
+        "harmonyRange": [0.2, 0.4],
+        "relationshipLevel": "Neutral",
+        "resourceBoost": 0.8,
+        "eventChance": 0.25,
+        "diplomaticSuccess": 0.3,
+        "conflictChance": 0.15,
+        "populationEffects": {
+          "satisfaction": -0.1,
+          "efficiency": 0.9
+        },
+        "description": "紧张关系，资源产量略降，中等冲突概率"
+      },
+      {
+        "levelID": "HAR003",
+        "levelName": "Neutral",
+        "harmonyRange": [0.4, 0.6],
+        "relationshipLevel": "Neutral",
+        "resourceBoost": 1.0,
+        "eventChance": 0.15,
+        "diplomaticSuccess": 0.5,
+        "conflictChance": 0.05,
+        "populationEffects": {
+          "satisfaction": 0.0,
+          "efficiency": 1.0
+        },
+        "description": "中立关系，正常生产，低冲突概率"
+      },
+      {
+        "levelID": "HAR004",
+        "levelName": "Friendly",
+        "harmonyRange": [0.6, 0.8],
+        "relationshipLevel": "Friendly",
+        "resourceBoost": 1.3,
+        "eventChance": 0.1,
+        "diplomaticSuccess": 0.7,
+        "conflictChance": 0.02,
+        "populationEffects": {
+          "satisfaction": 0.1,
+          "efficiency": 1.1
+        },
+        "description": "友好关系，资源产量提升，极低冲突概率"
+      },
+      {
+        "levelID": "HAR005",
+        "levelName": "Allied",
+        "harmonyRange": [0.8, 1.0],
+        "relationshipLevel": "Allied",
+        "resourceBoost": 1.6,
+        "eventChance": 0.05,
+        "diplomaticSuccess": 0.9,
+        "conflictChance": 0.01,
+        "populationEffects": {
+          "satisfaction": 0.2,
+          "efficiency": 1.2
+        },
+        "description": "联盟关系，大幅提升产量，几乎无冲突"
+      }
+    ],
+    "harmonyFactors": [
+      {
+        "factorID": "FAC001",
+        "factorName": "BuildingType",
+        "factorType": "Building",
+        "modifiers": {
+          "Symbiotic": 0.1,
+          "Defensive": 0.05,
+          "Elimination": -0.2,
+          "Exploitation": -0.3
+        },
+        "description": "建筑类型对和谐度的影响"
+      },
+      {
+        "factorID": "FAC002",
+        "factorName": "ResourceExtraction",
+        "factorType": "Resource",
+        "modifiers": {
+          "Sustainable": 0.05,
+          "Moderate": 0.0,
+          "Intensive": -0.1,
+          "Excessive": -0.3
+        },
+        "description": "资源开采强度对和谐度的影响"
+      },
+      {
+        "factorID": "FAC003",
+        "factorName": "EnvironmentalProtection",
+        "factorType": "Measure",
+        "modifiers": {
+          "Active": 0.15,
+          "Passive": 0.05,
+          "None": 0.0,
+          "Destructive": -0.2
+        },
+        "description": "环境保护措施对和谐度的影响"
+      },
+      {
+        "factorID": "FAC004",
+        "factorName": "DiplomaticAgreement",
+        "factorType": "Diplomacy",
+        "modifiers": {
+          "Alliance": 0.2,
+          "Cooperation": 0.1,
+          "Protection": 0.05,
+          "None": 0.0
+        },
+        "description": "外交协议对和谐度的影响"
+      },
+      {
+        "factorID": "FAC005",
+        "factorName": "HistoricalBehavior",
+        "factorType": "History",
+        "modifiers": {
+          "Positive": 0.1,
+          "Neutral": 0.0,
+          "Negative": -0.1,
+          "Hostile": -0.2
+        },
+        "description": "历史行为对和谐度的影响"
+      }
+    ],
+    "harmonyTrends": [
+      {
+        "trendID": "TRE001",
+        "trendName": "Increasing",
+        "trendType": "Increasing",
+        "changeRate": 0.05,
+        "stabilityBonus": 0.1,
+        "description": "和谐度正在上升"
+      },
+      {
+        "trendID": "TRE002",
+        "trendName": "Decreasing",
+        "trendType": "Decreasing",
+        "changeRate": -0.05,
+        "stabilityPenalty": -0.1,
+        "description": "和谐度正在下降"
+      },
+      {
+        "trendID": "TRE003",
+        "trendName": "Stable",
+        "trendType": "Stable",
+        "changeRate": 0.0,
+        "stabilityBonus": 0.05,
+        "description": "和谐度保持稳定"
+      }
+    ],
+    "elementSpecificHarmony": [
+      {
+        "elementID": "NAT001",
+        "elementName": "River",
+        "baseHarmony": 0.5,
+        "harmonyFactors": {
+          "waterConservation": 0.1,
+          "pollution": -0.2,
+          "damConstruction": -0.1,
+          "riverProtection": 0.15
+        },
+        "specialEffects": {
+          "floodPrevention": 0.05,
+          "waterQuality": 0.1,
+          "riverCommunication": 0.2
+        }
+      },
+      {
+        "elementID": "NAT004",
+        "elementName": "Forest",
+        "baseHarmony": 0.5,
+        "harmonyFactors": {
+          "deforestation": -0.3,
+          "reforestation": 0.15,
+          "firePrevention": 0.1,
+          "forestProtection": 0.2
+        },
+        "specialEffects": {
+          "biodiversity": 0.1,
+          "airQuality": 0.15,
+          "forestCommunication": 0.2
+        }
+      },
+      {
+        "elementID": "NAT007",
+        "elementName": "Mountain",
+        "baseHarmony": 0.4,
+        "harmonyFactors": {
+          "mining": -0.2,
+          "mountainRespect": 0.1,
+          "geologicalResearch": 0.05,
+          "mountainProtection": 0.15
+        },
+        "specialEffects": {
+          "mineralBalance": 0.1,
+          "geologicalStability": 0.15,
+          "mountainCommunication": 0.2
+        }
+      },
+      {
+        "elementID": "NAT010",
+        "elementName": "Volcano",
+        "baseHarmony": 0.3,
+        "harmonyFactors": {
+          "volcanoControl": -0.1,
+          "volcanoResearch": 0.1,
+          "geothermalUse": 0.05,
+          "volcanoRespect": 0.15
+        },
+        "specialEffects": {
+          "heatUtilization": 0.1,
+          "geologicalKnowledge": 0.15,
+          "volcanoCommunication": 0.25
+        }
+      }
+    ],
+    "harmonyCalculationRules": [
+      {
+        "ruleID": "CAL001",
+        "ruleName": "BaseCalculation",
+        "formula": "baseHarmony + sum(factorModifiers) + sum(specialEffects)",
+        "description": "基础和谐度计算公式"
+      },
+      {
+        "ruleID": "CAL002",
+        "ruleName": "TrendModification",
+        "formula": "currentHarmony + trendChangeRate",
+        "description": "趋势对和谐度的影响"
+      },
+      {
+        "ruleID": "CAL003",
+        "ruleName": "Clamping",
+        "formula": "clamp(harmony, 0.0, 1.0)",
+        "description": "和谐度限制在0-1范围内"
+      }
+    ]
+  }
+} 

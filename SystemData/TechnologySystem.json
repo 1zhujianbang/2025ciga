@@ -1,0 +1,359 @@
+{
+  "technologySystem": {
+    "technologyCategories": [
+      {
+        "categoryID": "CAT001",
+        "categoryName": "BasicTechnology",
+        "categoryType": "Basic",
+        "description": "基础技术，解锁基础建筑和功能",
+        "unlockRequirements": {
+          "population": 10,
+          "resources": ["RES001", "RES002"],
+          "buildings": []
+        }
+      },
+      {
+        "categoryID": "CAT002",
+        "categoryName": "SymbioticTechnology",
+        "categoryType": "Symbiotic",
+        "description": "共生技术，提升与自然的和谐关系",
+        "unlockRequirements": {
+          "population": 20,
+          "resources": ["RES010", "RES011"],
+          "buildings": ["SymbioticBuilding"]
+        }
+      },
+      {
+        "categoryID": "CAT003",
+        "categoryName": "DefensiveTechnology",
+        "categoryType": "Defensive",
+        "description": "防范技术，增强灾害防护能力",
+        "unlockRequirements": {
+          "population": 15,
+          "resources": ["RES003", "RES004"],
+          "buildings": ["DefensiveBuilding"]
+        }
+      },
+      {
+        "categoryID": "CAT004",
+        "categoryName": "EliminationTechnology",
+        "categoryType": "Elimination",
+        "description": "消除技术，提供环境改造能力",
+        "unlockRequirements": {
+          "population": 25,
+          "resources": ["RES007", "RES008"],
+          "buildings": ["EliminationBuilding"]
+        }
+      },
+      {
+        "categoryID": "CAT005",
+        "categoryName": "ExploitationTechnology",
+        "categoryType": "Exploitation",
+        "description": "利用技术，最大化资源获取效率",
+        "unlockRequirements": {
+          "population": 30,
+          "resources": ["RES005", "RES012"],
+          "buildings": ["ExploitationBuilding"]
+        }
+      }
+    ],
+    "technologyLevels": [
+      {
+        "levelID": "TECHL001",
+        "levelName": "Level1",
+        "technologyLevel": 1,
+        "researchCost": {
+          "knowledge": 50,
+          "scientists": 2,
+          "time": 5
+        },
+        "unlockFeatures": ["BasicBuilding", "BasicMeasure"],
+        "description": "技术等级1，基础功能"
+      },
+      {
+        "levelID": "TECHL002",
+        "levelName": "Level2",
+        "technologyLevel": 2,
+        "researchCost": {
+          "knowledge": 100,
+          "scientists": 3,
+          "time": 8
+        },
+        "unlockFeatures": ["AdvancedBuilding", "AdvancedMeasure"],
+        "description": "技术等级2，进阶功能"
+      },
+      {
+        "levelID": "TECHL003",
+        "levelName": "Level3",
+        "technologyLevel": 3,
+        "researchCost": {
+          "knowledge": 200,
+          "scientists": 5,
+          "time": 12
+        },
+        "unlockFeatures": ["ExpertBuilding", "ExpertMeasure"],
+        "description": "技术等级3，专家功能"
+      },
+      {
+        "levelID": "TECHL004",
+        "levelName": "Level4",
+        "technologyLevel": 4,
+        "researchCost": {
+          "knowledge": 400,
+          "scientists": 8,
+          "time": 15
+        },
+        "unlockFeatures": ["MasterBuilding", "MasterMeasure"],
+        "description": "技术等级4，大师功能"
+      },
+      {
+        "levelID": "TECHL005",
+        "levelName": "Level5",
+        "technologyLevel": 5,
+        "researchCost": {
+          "knowledge": 800,
+          "scientists": 12,
+          "time": 20
+        },
+        "unlockFeatures": ["LegendaryBuilding", "LegendaryMeasure"],
+        "description": "技术等级5，传奇功能"
+      }
+    ],
+    "specificTechnologies": [
+      {
+        "technologyID": "TECH001",
+        "technologyName": "BasicConstruction",
+        "technologyType": "Basic",
+        "technologyLevel": 1,
+        "researchCost": {
+          "knowledge": 50,
+          "scientists": 2,
+          "time": 5
+        },
+        "unlockedFeatures": ["SimpleHouse", "BasicFarm"],
+        "effects": {
+          "buildingEfficiency": 1.1,
+          "constructionSpeed": 1.0
+        },
+        "description": "基础建筑技术"
+      },
+      {
+        "technologyID": "TECH002",
+        "technologyName": "RiverSymbiosis",
+        "technologyType": "Symbiotic",
+        "technologyLevel": 2,
+        "researchCost": {
+          "knowledge": 100,
+          "scientists": 3,
+          "time": 8
+        },
+        "unlockedFeatures": ["WaterMill", "RiverTemple"],
+        "effects": {
+          "waterProduction": 1.2,
+          "harmonyGain": 0.1
+        },
+        "description": "河流共生技术"
+      },
+      {
+        "technologyID": "TECH003",
+        "technologyName": "FloodPrevention",
+        "technologyType": "Defensive",
+        "technologyLevel": 2,
+        "researchCost": {
+          "knowledge": 120,
+          "scientists": 4,
+          "time": 10
+        },
+        "unlockedFeatures": ["Dam", "FloodBarrier"],
+        "effects": {
+          "floodResistance": 0.8,
+          "waterControl": 1.2
+        },
+        "description": "防洪技术"
+      },
+      {
+        "technologyID": "TECH004",
+        "technologyName": "ForestSymbiosis",
+        "technologyType": "Symbiotic",
+        "technologyLevel": 2,
+        "researchCost": {
+          "knowledge": 100,
+          "scientists": 3,
+          "time": 8
+        },
+        "unlockedFeatures": ["TreehouseCommunity", "ForestSanctuary"],
+        "effects": {
+          "woodProduction": 1.2,
+          "harmonyGain": 0.1
+        },
+        "description": "森林共生技术"
+      },
+      {
+        "technologyID": "TECH005",
+        "technologyName": "FirePrevention",
+        "technologyType": "Defensive",
+        "technologyLevel": 2,
+        "researchCost": {
+          "knowledge": 120,
+          "scientists": 4,
+          "time": 10
+        },
+        "unlockedFeatures": ["FireStation", "FireBreak"],
+        "effects": {
+          "fireResistance": 0.8,
+          "fireControl": 1.2
+        },
+        "description": "防火技术"
+      },
+      {
+        "technologyID": "TECH006",
+        "technologyName": "MountainSymbiosis",
+        "technologyType": "Symbiotic",
+        "technologyLevel": 3,
+        "researchCost": {
+          "knowledge": 200,
+          "scientists": 5,
+          "time": 12
+        },
+        "unlockedFeatures": ["MountainTunnel", "MountainShrine"],
+        "effects": {
+          "mineralProduction": 1.3,
+          "harmonyGain": 0.15
+        },
+        "description": "山脉共生技术"
+      },
+      {
+        "technologyID": "TECH007",
+        "technologyName": "EarthquakeResistance",
+        "technologyType": "Defensive",
+        "technologyLevel": 3,
+        "researchCost": {
+          "knowledge": 250,
+          "scientists": 6,
+          "time": 15
+        },
+        "unlockedFeatures": ["EarthquakeResistant", "SeismicMonitor"],
+        "effects": {
+          "earthquakeResistance": 0.7,
+          "geologicalStability": 1.3
+        },
+        "description": "抗震技术"
+      },
+      {
+        "technologyID": "TECH008",
+        "technologyName": "VolcanoResearch",
+        "technologyType": "Symbiotic",
+        "technologyLevel": 4,
+        "researchCost": {
+          "knowledge": 400,
+          "scientists": 8,
+          "time": 18
+        },
+        "unlockedFeatures": ["VolcanoControl", "GeothermalPlant"],
+        "effects": {
+          "spiritEnergyProduction": 1.4,
+          "volcanoControl": 1.2
+        },
+        "description": "火山研究技术"
+      },
+      {
+        "technologyID": "TECH009",
+        "technologyName": "SpiritTechnology",
+        "technologyType": "Symbiotic",
+        "technologyLevel": 5,
+        "researchCost": {
+          "knowledge": 800,
+          "scientists": 12,
+          "time": 25
+        },
+        "unlockedFeatures": ["SpiritTower", "ConsciousnessLab"],
+        "effects": {
+          "spiritEnergyEfficiency": 1.5,
+          "consciousnessLevel": 1.3
+        },
+        "description": "灵能技术"
+      },
+      {
+        "technologyID": "TECH010",
+        "technologyName": "EnvironmentalModification",
+        "technologyType": "Elimination",
+        "technologyLevel": 4,
+        "researchCost": {
+          "knowledge": 500,
+          "scientists": 10,
+          "time": 20
+        },
+        "unlockedFeatures": ["RiverDivertor", "ForestClearer"],
+        "effects": {
+          "environmentalControl": 1.4,
+          "harmonyPenalty": -0.2
+        },
+        "description": "环境改造技术"
+      }
+    ],
+    "researchPrerequisites": [
+      {
+        "technologyID": "TECH002",
+        "prerequisites": ["TECH001"],
+        "description": "河流共生技术需要基础建筑技术"
+      },
+      {
+        "technologyID": "TECH004",
+        "prerequisites": ["TECH001"],
+        "description": "森林共生技术需要基础建筑技术"
+      },
+      {
+        "technologyID": "TECH006",
+        "prerequisites": ["TECH002", "TECH004"],
+        "description": "山脉共生技术需要河流和森林共生技术"
+      },
+      {
+        "technologyID": "TECH008",
+        "prerequisites": ["TECH006", "TECH007"],
+        "description": "火山研究技术需要山脉共生和抗震技术"
+      },
+      {
+        "technologyID": "TECH009",
+        "prerequisites": ["TECH008"],
+        "description": "灵能技术需要火山研究技术"
+      }
+    ],
+    "technologyEffects": [
+      {
+        "effectID": "TECHEFF001",
+        "effectName": "BuildingEfficiency",
+        "effectType": "Building",
+        "modifier": 1.1,
+        "description": "建筑效率提升"
+      },
+      {
+        "effectID": "TECHEFF002",
+        "effectName": "ResourceProduction",
+        "effectType": "Resource",
+        "modifier": 1.2,
+        "description": "资源产量提升"
+      },
+      {
+        "effectID": "TECHEFF003",
+        "effectName": "HarmonyGain",
+        "effectType": "Harmony",
+        "modifier": 0.1,
+        "description": "和谐度获得提升"
+      },
+      {
+        "effectID": "TECHEFF004",
+        "effectName": "DisasterResistance",
+        "effectType": "Defense",
+        "modifier": 0.8,
+        "description": "灾害抵抗能力提升"
+      },
+      {
+        "effectID": "TECHEFF005",
+        "effectName": "ResearchSpeed",
+        "effectType": "Research",
+        "modifier": 1.15,
+        "description": "研究速度提升"
+      }
+    ]
+  }
+} 

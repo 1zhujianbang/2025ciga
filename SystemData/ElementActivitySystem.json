@@ -1,0 +1,220 @@
+{
+  "elementActivitySystem": {
+    "activityLevels": [
+      {
+        "levelID": "ACT001",
+        "levelName": "Low",
+        "activityLevel": "Low",
+        "regenerationModifier": 0.8,
+        "eventTriggerChance": 0.05,
+        "resourceModifiers": {
+          "production": 0.9,
+          "consumption": 1.0
+        },
+        "harmonyEffects": {
+          "stability": 0.1,
+          "changeRate": 0.02
+        },
+        "description": "低活动状态，生产略降，事件概率低"
+      },
+      {
+        "levelID": "ACT002",
+        "levelName": "Medium",
+        "activityLevel": "Medium",
+        "regenerationModifier": 1.0,
+        "eventTriggerChance": 0.1,
+        "resourceModifiers": {
+          "production": 1.0,
+          "consumption": 1.0
+        },
+        "harmonyEffects": {
+          "stability": 0.05,
+          "changeRate": 0.05
+        },
+        "description": "中等活动状态，正常生产，中等事件概率"
+      },
+      {
+        "levelID": "ACT003",
+        "levelName": "High",
+        "activityLevel": "High",
+        "regenerationModifier": 1.3,
+        "eventTriggerChance": 0.2,
+        "resourceModifiers": {
+          "production": 1.2,
+          "consumption": 1.1
+        },
+        "harmonyEffects": {
+          "stability": 0.0,
+          "changeRate": 0.1
+        },
+        "description": "高活动状态，生产提升，高事件概率"
+      },
+      {
+        "levelID": "ACT004",
+        "levelName": "Critical",
+        "activityLevel": "Critical",
+        "regenerationModifier": 1.6,
+        "eventTriggerChance": 0.35,
+        "resourceModifiers": {
+          "production": 1.4,
+          "consumption": 1.2
+        },
+        "harmonyEffects": {
+          "stability": -0.05,
+          "changeRate": 0.15
+        },
+        "description": "临界活动状态，极高生产，极高事件概率"
+      }
+    ],
+    "activityTypes": [
+      {
+        "typeID": "TYPE001",
+        "typeName": "Peaceful",
+        "activityType": "Peaceful",
+        "conflictChance": 0.05,
+        "cooperationBonus": 0.2,
+        "resourceStability": 0.1,
+        "harmonyGain": 0.05,
+        "description": "和平状态，低冲突概率，高合作加成"
+      },
+      {
+        "typeID": "TYPE002",
+        "typeName": "Agitated",
+        "activityType": "Agitated",
+        "conflictChance": 0.15,
+        "cooperationBonus": 0.1,
+        "resourceStability": 0.0,
+        "harmonyGain": 0.02,
+        "description": "躁动状态，中等冲突概率，中等合作加成"
+      },
+      {
+        "typeID": "TYPE003",
+        "typeName": "Hostile",
+        "activityType": "Hostile",
+        "conflictChance": 0.3,
+        "cooperationBonus": -0.1,
+        "resourceStability": -0.1,
+        "harmonyGain": -0.05,
+        "description": "敌对状态，高冲突概率，负合作加成"
+      },
+      {
+        "typeID": "TYPE004",
+        "typeName": "Cooperative",
+        "activityType": "Cooperative",
+        "conflictChance": 0.02,
+        "cooperationBonus": 0.3,
+        "resourceStability": 0.15,
+        "harmonyGain": 0.1,
+        "description": "合作状态，极低冲突概率，极高合作加成"
+      }
+    ],
+    "elementSpecificActivities": [
+      {
+        "elementID": "NAT001",
+        "elementName": "River",
+        "baseActivityLevel": "Medium",
+        "activityTriggers": {
+          "highWaterLevel": "High",
+          "lowWaterLevel": "Agitated",
+          "pollution": "Hostile",
+          "harmony": "Cooperative"
+        },
+        "specialAbilities": ["WaterControl", "Communication", "Flood"],
+        "activityEffects": {
+          "waterProduction": 1.2,
+          "floodRisk": 0.1,
+          "communicationChance": 0.15
+        }
+      },
+      {
+        "elementID": "NAT004",
+        "elementName": "Forest",
+        "baseActivityLevel": "Medium",
+        "activityTriggers": {
+          "highWoodLevel": "High",
+          "deforestation": "Hostile",
+          "fire": "Critical",
+          "harmony": "Cooperative"
+        },
+        "specialAbilities": ["Growth", "Healing", "Fire"],
+        "activityEffects": {
+          "woodProduction": 1.2,
+          "fireRisk": 0.1,
+          "healingChance": 0.1
+        }
+      },
+      {
+        "elementID": "NAT007",
+        "elementName": "Mountain",
+        "baseActivityLevel": "Low",
+        "activityTriggers": {
+          "mining": "Agitated",
+          "earthquake": "Critical",
+          "respect": "Cooperative",
+          "harmony": "Peaceful"
+        },
+        "specialAbilities": ["Earthquake", "Mining", "Protection"],
+        "activityEffects": {
+          "mineralProduction": 1.3,
+          "earthquakeRisk": 0.05,
+          "protectionChance": 0.1
+        }
+      },
+      {
+        "elementID": "NAT010",
+        "elementName": "Volcano",
+        "baseActivityLevel": "Low",
+        "activityTriggers": {
+          "pressure": "High",
+          "eruption": "Critical",
+          "control": "Hostile",
+          "research": "Cooperative"
+        },
+        "specialAbilities": ["Eruption", "Heat", "Destruction"],
+        "activityEffects": {
+          "spiritEnergyProduction": 1.5,
+          "eruptionRisk": 0.15,
+          "heatBonus": 0.2
+        }
+      }
+    ],
+    "activityTransitionRules": [
+      {
+        "fromLevel": "Low",
+        "toLevel": "Medium",
+        "probability": 0.3,
+        "conditions": ["harmonyIncrease", "timePassed"]
+      },
+      {
+        "fromLevel": "Medium",
+        "toLevel": "High",
+        "probability": 0.2,
+        "conditions": ["resourceDemand", "environmentalStress"]
+      },
+      {
+        "fromLevel": "High",
+        "toLevel": "Critical",
+        "probability": 0.1,
+        "conditions": ["extremeStress", "conflict"]
+      },
+      {
+        "fromLevel": "Critical",
+        "toLevel": "High",
+        "probability": 0.4,
+        "conditions": ["relief", "timePassed"]
+      },
+      {
+        "fromLevel": "High",
+        "toLevel": "Medium",
+        "probability": 0.3,
+        "conditions": ["stabilization", "harmonyIncrease"]
+      },
+      {
+        "fromLevel": "Medium",
+        "toLevel": "Low",
+        "probability": 0.25,
+        "conditions": ["peace", "timePassed"]
+      }
+    ]
+  }
+} 

@@ -1,0 +1,224 @@
+{
+  "resources": [
+    {
+      "resourceID": "RES001",
+      "resourceName": "Water",
+      "resourceType": "Natural",
+      "baseValue": 10,
+      "regenerationRate": 5,
+      "maxStorage": 1000,
+      "description": "基础水资源，河流和湖泊的主要成分",
+      "iconPath": "Sprites/Resources/water",
+      "consciousnessLevel": 0
+    },
+    {
+      "resourceID": "RES002",
+      "resourceName": "Wood",
+      "resourceType": "Natural",
+      "baseValue": 15,
+      "regenerationRate": 2,
+      "maxStorage": 500,
+      "description": "木材资源，来自森林和树木",
+      "iconPath": "Sprites/Resources/wood",
+      "consciousnessLevel": 0
+    },
+    {
+      "resourceID": "RES003",
+      "resourceName": "Iron",
+      "resourceType": "Natural",
+      "baseValue": 25,
+      "regenerationRate": 1,
+      "maxStorage": 200,
+      "description": "铁矿资源，用于建筑和工具",
+      "iconPath": "Sprites/Resources/iron",
+      "consciousnessLevel": 0
+    },
+    {
+      "resourceID": "RES004",
+      "resourceName": "Copper",
+      "resourceType": "Natural",
+      "baseValue": 30,
+      "regenerationRate": 1,
+      "maxStorage": 150,
+      "description": "铜矿资源，用于电子设备",
+      "iconPath": "Sprites/Resources/copper",
+      "consciousnessLevel": 0
+    },
+    {
+      "resourceID": "RES005",
+      "resourceName": "Gold",
+      "resourceType": "Natural",
+      "baseValue": 100,
+      "regenerationRate": 0.5,
+      "maxStorage": 50,
+      "description": "金矿资源，高价值矿物",
+      "iconPath": "Sprites/Resources/gold",
+      "consciousnessLevel": 0
+    },
+    {
+      "resourceID": "RES006",
+      "resourceName": "Food",
+      "resourceType": "Natural",
+      "baseValue": 8,
+      "regenerationRate": 8,
+      "maxStorage": 800,
+      "description": "食物资源，维持人口生存",
+      "iconPath": "Sprites/Resources/food",
+      "consciousnessLevel": 0
+    },
+    {
+      "resourceID": "RES007",
+      "resourceName": "Coal",
+      "resourceType": "Natural",
+      "baseValue": 20,
+      "regenerationRate": 1,
+      "maxStorage": 300,
+      "description": "煤炭资源，基础能源",
+      "iconPath": "Sprites/Resources/coal",
+      "consciousnessLevel": 0
+    },
+    {
+      "resourceID": "RES008",
+      "resourceName": "Oil",
+      "resourceType": "Natural",
+      "baseValue": 50,
+      "regenerationRate": 0.2,
+      "maxStorage": 100,
+      "description": "石油资源，高级能源",
+      "iconPath": "Sprites/Resources/oil",
+      "consciousnessLevel": 0
+    },
+    {
+      "resourceID": "RES009",
+      "resourceName": "SpiritEnergy",
+      "resourceType": "Consciousness",
+      "baseValue": 200,
+      "regenerationRate": 1,
+      "maxStorage": 100,
+      "description": "灵能资源，从意识元素中提取",
+      "iconPath": "Sprites/Resources/spirit_energy",
+      "consciousnessLevel": 5
+    },
+    {
+      "resourceID": "RES010",
+      "resourceName": "Harmony",
+      "resourceType": "Consciousness",
+      "baseValue": 150,
+      "regenerationRate": 2,
+      "maxStorage": 200,
+      "description": "和谐度，与自然元素的关系指数",
+      "iconPath": "Sprites/Resources/harmony",
+      "consciousnessLevel": 3
+    },
+    {
+      "resourceID": "RES011",
+      "resourceName": "Knowledge",
+      "resourceType": "Consciousness",
+      "baseValue": 300,
+      "regenerationRate": 0.5,
+      "maxStorage": 50,
+      "description": "知识资源，对自然元素的理解",
+      "iconPath": "Sprites/Resources/knowledge",
+      "consciousnessLevel": 4
+    },
+    {
+      "resourceID": "RES012",
+      "resourceName": "Influence",
+      "resourceType": "Consciousness",
+      "baseValue": 250,
+      "regenerationRate": 1,
+      "maxStorage": 80,
+      "description": "影响力，对自然元素的控制能力",
+      "iconPath": "Sprites/Resources/influence",
+      "consciousnessLevel": 4
+    },
+    {
+      "resourceID": "RES013",
+      "resourceName": "Workers",
+      "resourceType": "Population",
+      "baseValue": 50,
+      "regenerationRate": 1,
+      "maxStorage": 100,
+      "description": "工人，基础劳动力",
+      "iconPath": "Sprites/Resources/workers",
+      "consciousnessLevel": 0
+    },
+    {
+      "resourceID": "RES014",
+      "resourceName": "Specialists",
+      "resourceType": "Population",
+      "baseValue": 100,
+      "regenerationRate": 0.5,
+      "maxStorage": 50,
+      "description": "专家，高级技能人员",
+      "iconPath": "Sprites/Resources/specialists",
+      "consciousnessLevel": 0
+    },
+    {
+      "resourceID": "RES015",
+      "resourceName": "Scientists",
+      "resourceType": "Population",
+      "baseValue": 150,
+      "regenerationRate": 0.3,
+      "maxStorage": 30,
+      "description": "科学家，研究和开发人员",
+      "iconPath": "Sprites/Resources/scientists",
+      "consciousnessLevel": 0
+    },
+    {
+      "resourceID": "RES016",
+      "resourceName": "Managers",
+      "resourceType": "Population",
+      "baseValue": 200,
+      "regenerationRate": 0.2,
+      "maxStorage": 20,
+      "description": "管理者，建筑和资源管理人员",
+      "iconPath": "Sprites/Resources/managers",
+      "consciousnessLevel": 0
+    },
+    {
+      "resourceID": "RES017",
+      "resourceName": "DiplomaticCredits",
+      "resourceType": "Diplomatic",
+      "baseValue": 100,
+      "regenerationRate": 0.5,
+      "maxStorage": 50,
+      "description": "外交信用，用于建立和维护外交关系",
+      "iconPath": "Sprites/Resources/diplomatic_credits",
+      "consciousnessLevel": 2
+    },
+    {
+      "resourceID": "RES018",
+      "resourceName": "TreatyPoints",
+      "resourceType": "Diplomatic",
+      "baseValue": 50,
+      "regenerationRate": 0.3,
+      "maxStorage": 30,
+      "description": "条约点数，用于签署和升级外交协议",
+      "iconPath": "Sprites/Resources/treaty_points",
+      "consciousnessLevel": 3
+    },
+    {
+      "resourceID": "RES019",
+      "resourceName": "Goodwill",
+      "resourceType": "Diplomatic",
+      "baseValue": 75,
+      "regenerationRate": 0.4,
+      "maxStorage": 40,
+      "description": "善意值，影响外交谈判的成功率",
+      "iconPath": "Sprites/Resources/goodwill",
+      "consciousnessLevel": 2
+    },
+    {
+      "resourceID": "RES020",
+      "resourceName": "AllianceStrength",
+      "resourceType": "Diplomatic",
+      "baseValue": 300,
+      "regenerationRate": 0.1,
+      "maxStorage": 25,
+      "description": "联盟强度，衡量与自然元素的联盟关系深度",
+      "iconPath": "Sprites/Resources/alliance_strength",
+      "consciousnessLevel": 5
+    }
+  ]
+} 

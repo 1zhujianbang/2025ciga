@@ -1,0 +1,344 @@
+{
+  "populationSystem": {
+    "populationTypes": [
+      {
+        "typeID": "POP001",
+        "typeName": "Workers",
+        "populationType": "Workers",
+        "baseEfficiency": 1.0,
+        "resourceConsumption": {
+          "food": 1.0,
+          "water": 0.5,
+          "energy": 0.3
+        },
+        "productionBonus": {
+          "basicResources": 1.1,
+          "construction": 1.0,
+          "maintenance": 1.0
+        },
+        "satisfactionFactors": {
+          "basicNeeds": 0.8,
+          "environmentalQuality": 0.6,
+          "safety": 0.7
+        },
+        "description": "工人，基础劳动力，消耗少，效率一般"
+      },
+      {
+        "typeID": "POP002",
+        "typeName": "Specialists",
+        "populationType": "Specialists",
+        "baseEfficiency": 1.3,
+        "resourceConsumption": {
+          "food": 1.2,
+          "water": 0.6,
+          "energy": 0.4
+        },
+        "productionBonus": {
+          "advancedResources": 1.2,
+          "specializedTasks": 1.3,
+          "qualityControl": 1.1
+        },
+        "satisfactionFactors": {
+          "basicNeeds": 0.9,
+          "environmentalQuality": 0.7,
+          "safety": 0.8,
+          "recognition": 0.8
+        },
+        "description": "专家，高级技能，消耗中等，效率高"
+      },
+      {
+        "typeID": "POP003",
+        "typeName": "Scientists",
+        "populationType": "Scientists",
+        "baseEfficiency": 1.5,
+        "resourceConsumption": {
+          "food": 1.5,
+          "water": 0.8,
+          "energy": 0.6
+        },
+        "productionBonus": {
+          "research": 1.4,
+          "technology": 1.3,
+          "innovation": 1.2
+        },
+        "satisfactionFactors": {
+          "basicNeeds": 1.0,
+          "environmentalQuality": 0.8,
+          "safety": 0.9,
+          "intellectualStimulation": 0.9
+        },
+        "description": "科学家，研究能力，消耗高，研究效率高"
+      },
+      {
+        "typeID": "POP004",
+        "typeName": "Managers",
+        "populationType": "Managers",
+        "baseEfficiency": 1.2,
+        "resourceConsumption": {
+          "food": 1.8,
+          "water": 1.0,
+          "energy": 0.8
+        },
+        "productionBonus": {
+          "management": 1.3,
+          "coordination": 1.2,
+          "efficiency": 1.1
+        },
+        "satisfactionFactors": {
+          "basicNeeds": 1.1,
+          "environmentalQuality": 0.9,
+          "safety": 1.0,
+          "status": 0.9
+        },
+        "description": "管理者，管理能力，消耗最高，管理效率高"
+      }
+    ],
+    "satisfactionLevels": [
+      {
+        "levelID": "SAT001",
+        "levelName": "VeryUnhappy",
+        "satisfactionRange": [0.0, 0.2],
+        "efficiencyModifier": 0.5,
+        "growthRate": -0.1,
+        "migrationChance": 0.3,
+        "description": "非常不满意，效率极低，人口流失"
+      },
+      {
+        "levelID": "SAT002",
+        "levelName": "Unhappy",
+        "satisfactionRange": [0.2, 0.4],
+        "efficiencyModifier": 0.7,
+        "growthRate": -0.05,
+        "migrationChance": 0.15,
+        "description": "不满意，效率低，人口减少"
+      },
+      {
+        "levelID": "SAT003",
+        "levelName": "Neutral",
+        "satisfactionRange": [0.4, 0.6],
+        "efficiencyModifier": 1.0,
+        "growthRate": 0.0,
+        "migrationChance": 0.05,
+        "description": "中性，正常效率，人口稳定"
+      },
+      {
+        "levelID": "SAT004",
+        "levelName": "Happy",
+        "satisfactionRange": [0.6, 0.8],
+        "efficiencyModifier": 1.2,
+        "growthRate": 0.05,
+        "migrationChance": 0.02,
+        "description": "满意，高效率，人口增长"
+      },
+      {
+        "levelID": "SAT005",
+        "levelName": "VeryHappy",
+        "satisfactionRange": [0.8, 1.0],
+        "efficiencyModifier": 1.5,
+        "growthRate": 0.1,
+        "migrationChance": 0.01,
+        "description": "非常满意，极高效率，人口快速增长"
+      }
+    ],
+    "satisfactionFactors": [
+      {
+        "factorID": "SATF001",
+        "factorName": "BasicNeeds",
+        "factorType": "Needs",
+        "weight": 0.3,
+        "subFactors": {
+          "food": 0.4,
+          "water": 0.3,
+          "shelter": 0.3
+        },
+        "description": "基本需求满足度"
+      },
+      {
+        "factorID": "SATF002",
+        "factorName": "EnvironmentalQuality",
+        "factorType": "Environment",
+        "weight": 0.25,
+        "subFactors": {
+          "airQuality": 0.4,
+          "waterQuality": 0.3,
+          "noiseLevel": 0.3
+        },
+        "description": "环境质量"
+      },
+      {
+        "factorID": "SATF003",
+        "factorName": "Safety",
+        "factorType": "Safety",
+        "weight": 0.2,
+        "subFactors": {
+          "disasterRisk": 0.5,
+          "crimeRate": 0.3,
+          "healthcare": 0.2
+        },
+        "description": "安全程度"
+      },
+      {
+        "factorID": "SATF004",
+        "factorName": "QualityOfLife",
+        "factorType": "Life",
+        "weight": 0.15,
+        "subFactors": {
+          "entertainment": 0.4,
+          "education": 0.3,
+          "socialLife": 0.3
+        },
+        "description": "生活质量"
+      },
+      {
+        "factorID": "SATF005",
+        "factorName": "Harmony",
+        "factorType": "Harmony",
+        "weight": 0.1,
+        "subFactors": {
+          "naturalHarmony": 0.6,
+          "socialHarmony": 0.4
+        },
+        "description": "和谐度"
+      }
+    ],
+    "populationGrowth": [
+      {
+        "growthID": "GRO001",
+        "growthType": "Natural",
+        "baseRate": 0.02,
+        "modifiers": {
+          "satisfaction": 0.1,
+          "resources": 0.05,
+          "environment": 0.03
+        },
+        "description": "自然增长"
+      },
+      {
+        "growthID": "GRO002",
+        "growthType": "Migration",
+        "baseRate": 0.01,
+        "modifiers": {
+          "satisfaction": 0.2,
+          "opportunities": 0.15,
+          "safety": 0.1
+        },
+        "description": "人口迁移"
+      },
+      {
+        "growthID": "GRO003",
+        "growthType": "Education",
+        "baseRate": 0.005,
+        "modifiers": {
+          "educationFacilities": 0.3,
+          "knowledge": 0.2,
+          "scientists": 0.1
+        },
+        "description": "教育提升"
+      }
+    ],
+    "populationSpecializations": [
+      {
+        "specializationID": "SPEC001",
+        "specializationName": "Agricultural",
+        "specializationType": "Agriculture",
+        "requirements": {
+          "farmBuildings": 2,
+          "farmland": 0.3
+        },
+        "bonuses": {
+          "foodProduction": 1.3,
+          "farmEfficiency": 1.2
+        },
+        "description": "农业专业化"
+      },
+      {
+        "specializationID": "SPEC002",
+        "specializationName": "Industrial",
+        "specializationType": "Industry",
+        "requirements": {
+          "factoryBuildings": 2,
+          "mineralResources": 0.4
+        },
+        "bonuses": {
+          "manufacturing": 1.3,
+          "resourceProcessing": 1.2
+        },
+        "description": "工业专业化"
+      },
+      {
+        "specializationID": "SPEC003",
+        "specializationName": "Scientific",
+        "specializationType": "Science",
+        "requirements": {
+          "researchBuildings": 2,
+          "scientists": 0.2
+        },
+        "bonuses": {
+          "researchSpeed": 1.3,
+          "technologyUnlock": 1.2
+        },
+        "description": "科研专业化"
+      },
+      {
+        "specializationID": "SPEC004",
+        "specializationName": "Environmental",
+        "specializationType": "Environment",
+        "requirements": {
+          "environmentalBuildings": 2,
+          "harmony": 0.7
+        },
+        "bonuses": {
+          "environmentalProtection": 1.3,
+          "harmonyGain": 1.2
+        },
+        "description": "环保专业化"
+      }
+    ],
+    "populationEvents": [
+      {
+        "eventID": "POPEVT001",
+        "eventName": "PopulationBoom",
+        "eventType": "Growth",
+        "triggerConditions": {
+          "satisfaction": 0.8,
+          "resources": 0.7,
+          "environment": 0.6
+        },
+        "effects": {
+          "growthRate": 0.2,
+          "efficiency": 1.1
+        },
+        "description": "人口激增"
+      },
+      {
+        "eventID": "POPEVT002",
+        "eventName": "PopulationDecline",
+        "eventType": "Decline",
+        "triggerConditions": {
+          "satisfaction": 0.3,
+          "resources": 0.4,
+          "environment": 0.3
+        },
+        "effects": {
+          "growthRate": -0.1,
+          "efficiency": 0.9
+        },
+        "description": "人口下降"
+      },
+      {
+        "eventID": "POPEVT003",
+        "eventName": "MigrationWave",
+        "eventType": "Migration",
+        "triggerConditions": {
+          "satisfaction": 0.5,
+          "opportunities": 0.6
+        },
+        "effects": {
+          "populationChange": 0.1,
+          "diversity": 1.2
+        },
+        "description": "移民潮"
+      }
+    ]
+  }
+} 

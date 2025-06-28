@@ -1,0 +1,514 @@
+{
+  "measures": [
+    {
+      "measureID": "MSR001",
+      "measureName": "EnvironmentalTax",
+      "measureType": "Policy",
+      "measureCategory": "Economic",
+      "costWood": 0,
+      "costIron": 0,
+      "costCopper": 0,
+      "costGold": 100,
+      "costSpiritEnergy": 0,
+      "implementationTime": 30,
+      "duration": 180,
+      "effectStrength": 0.8,
+      "effectRange": "Regional",
+      "successRate": 0.9,
+      "description": "环境税政策，对破坏环境的行为征税，促进环保",
+      "iconPath": "Sprites/Measures/environmental_tax",
+      "unlockTech": "TECH001",
+      "getEffects": [
+        {
+          "effectType": "EconomicBonus",
+          "target": "Gold",
+          "value": 0.15,
+          "description": "获得环境税收，金币收入提升15%"
+        },
+        {
+          "effectType": "EnvironmentalBonus",
+          "target": "All",
+          "value": 0.1,
+          "description": "环境质量提升10%"
+        },
+        {
+          "effectType": "PopulationBonus",
+          "target": "All",
+          "value": 0.05,
+          "description": "人口满意度提升5%（环保意识增强）"
+        },
+        {
+          "effectType": "BuildingPenalty",
+          "target": "Production",
+          "value": -0.1,
+          "description": "生产建筑效率下降10%（环保成本）"
+        },
+        {
+          "effectType": "HarmonyBonus",
+          "target": "All",
+          "value": 0.08,
+          "description": "与自然元素的和谐度提升8%"
+        }
+      ]
+    },
+    {
+      "measureID": "MSR002",
+      "measureName": "GreenSubsidy",
+      "measureType": "Policy",
+      "measureCategory": "Economic",
+      "costWood": 0,
+      "costIron": 0,
+      "costCopper": 0,
+      "costGold": 150,
+      "costSpiritEnergy": 0,
+      "implementationTime": 45,
+      "duration": 240,
+      "effectStrength": 0.7,
+      "effectRange": "Regional",
+      "successRate": 0.85,
+      "description": "绿色补贴政策，对环保行为提供补贴",
+      "iconPath": "Sprites/Measures/green_subsidy",
+      "unlockTech": "TECH002",
+      "getEffects": [
+        {
+          "effectType": "EconomicPenalty",
+          "target": "Gold",
+          "value": -0.2,
+          "description": "支出补贴费用，金币收入下降20%"
+        },
+        {
+          "effectType": "EnvironmentalBonus",
+          "target": "All",
+          "value": 0.15,
+          "description": "环境质量提升15%"
+        },
+        {
+          "effectType": "BuildingBonus",
+          "target": "Symbiotic",
+          "value": 0.2,
+          "description": "共生建筑效率提升20%"
+        },
+        {
+          "effectType": "PopulationBonus",
+          "target": "All",
+          "value": 0.1,
+          "description": "人口满意度提升10%"
+        },
+        {
+          "effectType": "HarmonyBonus",
+          "target": "All",
+          "value": 0.12,
+          "description": "与自然元素的和谐度提升12%"
+        }
+      ]
+    },
+    {
+      "measureID": "MSR003",
+      "measureName": "EnvironmentalRegulation",
+      "measureType": "Policy",
+      "measureCategory": "Legal",
+      "costWood": 0,
+      "costIron": 0,
+      "costCopper": 0,
+      "costGold": 200,
+      "costSpiritEnergy": 0,
+      "implementationTime": 60,
+      "duration": 300,
+      "effectStrength": 0.9,
+      "effectRange": "Regional",
+      "successRate": 0.8,
+      "description": "环保法规政策，制定严格的环保标准",
+      "iconPath": "Sprites/Measures/environmental_regulation",
+      "unlockTech": "TECH003",
+      "getEffects": [
+        {
+          "effectType": "EnvironmentalBonus",
+          "target": "All",
+          "value": 0.25,
+          "description": "环境质量大幅提升25%"
+        },
+        {
+          "effectType": "BuildingPenalty",
+          "target": "Production",
+          "value": -0.15,
+          "description": "生产建筑效率下降15%（环保标准限制）"
+        },
+        {
+          "effectType": "PopulationBonus",
+          "target": "All",
+          "value": 0.15,
+          "description": "人口满意度提升15%"
+        },
+        {
+          "effectType": "HarmonyBonus",
+          "target": "All",
+          "value": 0.2,
+          "description": "与自然元素的和谐度提升20%"
+        },
+        {
+          "effectType": "EventBonus",
+          "target": "Consciousness",
+          "value": 0.3,
+          "description": "意识觉醒事件触发概率提升30%"
+        }
+      ]
+    },
+    {
+      "measureID": "MSR004",
+      "measureName": "RiverProtectionTreaty",
+      "measureType": "Policy",
+      "measureCategory": "Diplomatic",
+      "costWood": 50,
+      "costIron": 25,
+      "costCopper": 0,
+      "costGold": 80,
+      "costSpiritEnergy": 30,
+      "implementationTime": 90,
+      "duration": 360,
+      "effectStrength": 0.8,
+      "effectRange": "Regional",
+      "successRate": 0.75,
+      "description": "河流保护条约，与河流签订保护协议",
+      "iconPath": "Sprites/Measures/river_protection_treaty",
+      "unlockTech": "TECH004",
+      "getEffects": [
+        {
+          "effectType": "DiplomaticBonus",
+          "target": "River",
+          "value": 0.4,
+          "description": "与河流的外交关系提升40%"
+        },
+        {
+          "effectType": "ResourceBonus",
+          "target": "Water",
+          "value": 0.2,
+          "description": "水资源获取效率提升20%"
+        },
+        {
+          "effectType": "HarmonyBonus",
+          "target": "River",
+          "value": 0.25,
+          "description": "与河流的和谐度提升25%"
+        },
+        {
+          "effectType": "EventBonus",
+          "target": "RiverEvents",
+          "value": 0.3,
+          "description": "河流相关事件触发概率提升30%"
+        },
+        {
+          "effectType": "EnvironmentalBonus",
+          "target": "Water",
+          "value": 0.15,
+          "description": "水域环境质量提升15%"
+        }
+      ]
+    },
+    {
+      "measureID": "MSR005",
+      "measureName": "WaterRightsAgreement",
+      "measureType": "Policy",
+      "measureCategory": "Diplomatic",
+      "costWood": 80,
+      "costIron": 40,
+      "costCopper": 20,
+      "costGold": 120,
+      "costSpiritEnergy": 50,
+      "implementationTime": 120,
+      "duration": 420,
+      "effectStrength": 0.9,
+      "effectRange": "Regional",
+      "successRate": 0.7,
+      "description": "水资源协议，与河流协商水资源使用",
+      "iconPath": "Sprites/Measures/water_rights_agreement",
+      "unlockTech": "TECH005",
+      "getEffects": [
+        {
+          "effectType": "DiplomaticBonus",
+          "target": "River",
+          "value": 0.5,
+          "description": "与河流的外交关系提升50%"
+        },
+        {
+          "effectType": "ResourceBonus",
+          "target": "Water",
+          "value": 0.3,
+          "description": "水资源获取效率提升30%"
+        },
+        {
+          "effectType": "HarmonyBonus",
+          "target": "River",
+          "value": 0.35,
+          "description": "与河流的和谐度提升35%"
+        },
+        {
+          "effectType": "BuildingBonus",
+          "target": "River",
+          "value": 0.25,
+          "description": "河流相关建筑效率提升25%"
+        },
+        {
+          "effectType": "EventBonus",
+          "target": "RiverEvents",
+          "value": 0.4,
+          "description": "河流相关事件触发概率提升40%"
+        }
+      ]
+    },
+    {
+      "measureID": "MSR006",
+      "measureName": "HydroelectricPartnership",
+      "measureType": "Policy",
+      "measureCategory": "Diplomatic",
+      "costWood": 100,
+      "costIron": 50,
+      "costCopper": 25,
+      "costGold": 150,
+      "costSpiritEnergy": 80,
+      "implementationTime": 150,
+      "duration": 480,
+      "effectStrength": 0.85,
+      "effectRange": "Regional",
+      "successRate": 0.65,
+      "description": "水电合作政策，与河流合作发电",
+      "iconPath": "Sprites/Measures/hydroelectric_partnership",
+      "unlockTech": "TECH006",
+      "getEffects": [
+        {
+          "effectType": "DiplomaticBonus",
+          "target": "River",
+          "value": 0.6,
+          "description": "与河流的外交关系提升60%"
+        },
+        {
+          "effectType": "ResourceBonus",
+          "target": "Oil",
+          "value": 0.4,
+          "description": "石油获取效率提升40%（替代能源）"
+        },
+        {
+          "effectType": "HarmonyBonus",
+          "target": "River",
+          "value": 0.45,
+          "description": "与河流的和谐度提升45%"
+        },
+        {
+          "effectType": "BuildingBonus",
+          "target": "Hydroelectric",
+          "value": 0.35,
+          "description": "水力发电建筑效率提升35%"
+        },
+        {
+          "effectType": "EnvironmentalBonus",
+          "target": "All",
+          "value": 0.2,
+          "description": "环境质量提升20%（清洁能源）"
+        }
+      ]
+    },
+    {
+      "measureID": "MSR007",
+      "measureName": "MiningQuota",
+      "measureType": "Policy",
+      "measureCategory": "Regulatory",
+      "costWood": 0,
+      "costIron": 0,
+      "costCopper": 0,
+      "costGold": 100,
+      "costSpiritEnergy": 0,
+      "implementationTime": 60,
+      "duration": 180,
+      "effectStrength": 0.7,
+      "effectRange": "Regional",
+      "successRate": 0.9,
+      "description": "采矿配额政策，限制采矿数量保护环境",
+      "iconPath": "Sprites/Measures/mining_quota",
+      "unlockTech": "TECH007",
+      "getEffects": [
+        {
+          "effectType": "EnvironmentalBonus",
+          "target": "All",
+          "value": 0.15,
+          "description": "环境质量提升15%"
+        },
+        {
+          "effectType": "BuildingPenalty",
+          "target": "Mining",
+          "value": -0.2,
+          "description": "采矿建筑效率下降20%"
+        },
+        {
+          "effectType": "ResourcePenalty",
+          "target": "Iron;Copper;Gold",
+          "value": -0.15,
+          "description": "矿物资源获取效率下降15%"
+        },
+        {
+          "effectType": "PopulationBonus",
+          "target": "All",
+          "value": 0.08,
+          "description": "人口满意度提升8%"
+        },
+        {
+          "effectType": "HarmonyBonus",
+          "target": "Mountain",
+          "value": 0.1,
+          "description": "与山脉的和谐度提升10%"
+        }
+      ]
+    },
+    {
+      "measureID": "MSR008",
+      "measureName": "ResourceConservation",
+      "measureType": "Policy",
+      "measureCategory": "Regulatory",
+      "costWood": 0,
+      "costIron": 0,
+      "costCopper": 0,
+      "costGold": 120,
+      "costSpiritEnergy": 0,
+      "implementationTime": 75,
+      "duration": 240,
+      "effectStrength": 0.8,
+      "effectRange": "Regional",
+      "successRate": 0.85,
+      "description": "资源保护政策，保护不可再生资源",
+      "iconPath": "Sprites/Measures/resource_conservation",
+      "unlockTech": "TECH008",
+      "getEffects": [
+        {
+          "effectType": "EnvironmentalBonus",
+          "target": "All",
+          "value": 0.2,
+          "description": "环境质量提升20%"
+        },
+        {
+          "effectType": "ResourceBonus",
+          "target": "All",
+          "value": 0.1,
+          "description": "所有资源存储容量提升10%"
+        },
+        {
+          "effectType": "BuildingPenalty",
+          "target": "Production",
+          "value": -0.1,
+          "description": "生产建筑效率下降10%"
+        },
+        {
+          "effectType": "PopulationBonus",
+          "target": "All",
+          "value": 0.1,
+          "description": "人口满意度提升10%"
+        },
+        {
+          "effectType": "HarmonyBonus",
+          "target": "All",
+          "value": 0.15,
+          "description": "与所有自然元素的和谐度提升15%"
+        }
+      ]
+    },
+    {
+      "measureID": "MSR009",
+      "measureName": "RecyclingIncentive",
+      "measureType": "Policy",
+      "measureCategory": "Economic",
+      "costWood": 0,
+      "costIron": 0,
+      "costCopper": 0,
+      "costGold": 90,
+      "costSpiritEnergy": 0,
+      "implementationTime": 45,
+      "duration": 180,
+      "effectStrength": 0.6,
+      "effectRange": "Regional",
+      "successRate": 0.9,
+      "description": "回收激励政策，鼓励资源回收利用",
+      "iconPath": "Sprites/Measures/recycling_incentive",
+      "unlockTech": "TECH009",
+      "getEffects": [
+        {
+          "effectType": "EnvironmentalBonus",
+          "target": "All",
+          "value": 0.1,
+          "description": "环境质量提升10%"
+        },
+        {
+          "effectType": "ResourceBonus",
+          "target": "Iron;Copper",
+          "value": 0.15,
+          "description": "铁矿和铜矿获取效率提升15%（回收利用）"
+        },
+        {
+          "effectType": "EconomicBonus",
+          "target": "Gold",
+          "value": 0.05,
+          "description": "金币收入提升5%（回收收益）"
+        },
+        {
+          "effectType": "PopulationBonus",
+          "target": "Workers",
+          "value": 0.08,
+          "description": "工人效率提升8%"
+        },
+        {
+          "effectType": "HarmonyBonus",
+          "target": "All",
+          "value": 0.08,
+          "description": "与自然元素的和谐度提升8%"
+        }
+      ]
+    },
+    {
+      "measureID": "MSR010",
+      "measureName": "DeepMiningBan",
+      "measureType": "Policy",
+      "measureCategory": "Regulatory",
+      "costWood": 0,
+      "costIron": 0,
+      "costCopper": 0,
+      "costGold": 200,
+      "costSpiritEnergy": 0,
+      "implementationTime": 90,
+      "duration": 360,
+      "effectStrength": 0.9,
+      "effectRange": "Regional",
+      "successRate": 0.75,
+      "description": "深部采矿禁令，禁止破坏性深部采矿",
+      "iconPath": "Sprites/Measures/deep_mining_ban",
+      "unlockTech": "TECH010",
+      "getEffects": [
+        {
+          "effectType": "EnvironmentalBonus",
+          "target": "All",
+          "value": 0.3,
+          "description": "环境质量大幅提升30%"
+        },
+        {
+          "effectType": "BuildingPenalty",
+          "target": "Mining",
+          "value": -0.3,
+          "description": "采矿建筑效率下降30%"
+        },
+        {
+          "effectType": "ResourcePenalty",
+          "target": "Gold",
+          "value": -0.25,
+          "description": "金矿获取效率下降25%"
+        },
+        {
+          "effectType": "PopulationBonus",
+          "target": "All",
+          "value": 0.15,
+          "description": "人口满意度提升15%"
+        },
+        {
+          "effectType": "HarmonyBonus",
+          "target": "Mountain",
+          "value": 0.25,
+          "description": "与山脉的和谐度提升25%"
+        }
+      ]
+    }
+  ]
+} 

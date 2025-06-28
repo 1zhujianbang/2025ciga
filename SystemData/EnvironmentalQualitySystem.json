@@ -1,0 +1,290 @@
+{
+  "environmentalQualitySystem": {
+    "qualityLevels": [
+      {
+        "levelID": "ENV001",
+        "levelName": "Excellent",
+        "qualityRange": [0.8, 1.0],
+        "pollutionLevel": 0.0,
+        "biodiversityIndex": 0.9,
+        "sustainabilityScore": 0.95,
+        "globalEffects": {
+          "populationSatisfaction": 1.5,
+          "resourceEfficiency": 1.4,
+          "eventFrequency": 0.5
+        },
+        "description": "极好环境，极高满意度和效率"
+      },
+      {
+        "levelID": "ENV002",
+        "levelName": "Good",
+        "qualityRange": [0.6, 0.8],
+        "pollutionLevel": 0.1,
+        "biodiversityIndex": 0.7,
+        "sustainabilityScore": 0.8,
+        "globalEffects": {
+          "populationSatisfaction": 1.2,
+          "resourceEfficiency": 1.2,
+          "eventFrequency": 0.7
+        },
+        "description": "好环境，高满意度和效率"
+      },
+      {
+        "levelID": "ENV003",
+        "levelName": "Average",
+        "qualityRange": [0.4, 0.6],
+        "pollutionLevel": 0.3,
+        "biodiversityIndex": 0.5,
+        "sustainabilityScore": 0.6,
+        "globalEffects": {
+          "populationSatisfaction": 1.0,
+          "resourceEfficiency": 1.0,
+          "eventFrequency": 1.0
+        },
+        "description": "一般环境，正常满意度和效率"
+      },
+      {
+        "levelID": "ENV004",
+        "levelName": "Poor",
+        "qualityRange": [0.2, 0.4],
+        "pollutionLevel": 0.6,
+        "biodiversityIndex": 0.3,
+        "sustainabilityScore": 0.4,
+        "globalEffects": {
+          "populationSatisfaction": 0.8,
+          "resourceEfficiency": 0.8,
+          "eventFrequency": 1.3
+        },
+        "description": "差环境，低满意度和效率"
+      },
+      {
+        "levelID": "ENV005",
+        "levelName": "Terrible",
+        "qualityRange": [0.0, 0.2],
+        "pollutionLevel": 0.9,
+        "biodiversityIndex": 0.1,
+        "sustainabilityScore": 0.2,
+        "globalEffects": {
+          "populationSatisfaction": 0.5,
+          "resourceEfficiency": 0.6,
+          "eventFrequency": 1.8
+        },
+        "description": "极差环境，极低满意度和效率"
+      }
+    ],
+    "environmentalFactors": [
+      {
+        "factorID": "ENVF001",
+        "factorName": "BuildingDensity",
+        "factorType": "Building",
+        "modifiers": {
+          "Low": 0.1,
+          "Medium": 0.0,
+          "High": -0.1,
+          "Extreme": -0.3
+        },
+        "description": "建筑密度对环境质量的影响"
+      },
+      {
+        "factorID": "ENVF002",
+        "factorName": "ResourceExtraction",
+        "factorType": "Resource",
+        "modifiers": {
+          "Sustainable": 0.05,
+          "Moderate": 0.0,
+          "Intensive": -0.15,
+          "Excessive": -0.4
+        },
+        "description": "资源开采强度对环境质量的影响"
+      },
+      {
+        "factorID": "ENVF003",
+        "factorName": "ProtectionMeasures",
+        "factorType": "Measure",
+        "modifiers": {
+          "Active": 0.2,
+          "Passive": 0.1,
+          "None": 0.0,
+          "Destructive": -0.3
+        },
+        "description": "环境保护措施对环境质量的影响"
+      },
+      {
+        "factorID": "ENVF004",
+        "factorName": "NaturalElementState",
+        "factorType": "Element",
+        "modifiers": {
+          "Healthy": 0.15,
+          "Stable": 0.05,
+          "Stressed": -0.1,
+          "Damaged": -0.25
+        },
+        "description": "自然元素状态对环境质量的影响"
+      },
+      {
+        "factorID": "ENVF005",
+        "factorName": "HistoricalRecord",
+        "factorType": "History",
+        "modifiers": {
+          "Positive": 0.1,
+          "Neutral": 0.0,
+          "Negative": -0.1,
+          "Destructive": -0.2
+        },
+        "description": "历史环境记录对环境质量的影响"
+      }
+    ],
+    "pollutionTypes": [
+      {
+        "pollutionID": "POL001",
+        "pollutionName": "AirPollution",
+        "pollutionType": "Air",
+        "sources": ["Factory", "PowerPlant", "Vehicle"],
+        "effects": {
+          "populationHealth": -0.2,
+          "plantGrowth": -0.15,
+          "visibility": -0.1
+        },
+        "mitigation": ["AirFilter", "CleanEnergy", "TreePlanting"]
+      },
+      {
+        "pollutionID": "POL002",
+        "pollutionName": "WaterPollution",
+        "pollutionType": "Water",
+        "sources": ["Factory", "Mining", "Sewage"],
+        "effects": {
+          "waterQuality": -0.3,
+          "fishPopulation": -0.25,
+          "drinkingWater": -0.2
+        },
+        "mitigation": ["WaterTreatment", "WasteManagement", "RiverProtection"]
+      },
+      {
+        "pollutionID": "POL003",
+        "pollutionName": "SoilPollution",
+        "pollutionType": "Soil",
+        "sources": ["Mining", "Chemical", "Waste"],
+        "effects": {
+          "cropYield": -0.2,
+          "soilFertility": -0.25,
+          "undergroundWater": -0.15
+        },
+        "mitigation": ["SoilTreatment", "OrganicFarming", "WasteReduction"]
+      },
+      {
+        "pollutionID": "POL004",
+        "pollutionName": "NoisePollution",
+        "pollutionType": "Noise",
+        "sources": ["Factory", "Construction", "Traffic"],
+        "effects": {
+          "populationSatisfaction": -0.15,
+          "wildlife": -0.1,
+          "sleepQuality": -0.2
+        },
+        "mitigation": ["SoundBarrier", "QuietTechnology", "GreenSpace"]
+      }
+    ],
+    "biodiversityIndicators": [
+      {
+        "indicatorID": "BIO001",
+        "indicatorName": "PlantDiversity",
+        "indicatorType": "Plant",
+        "baseValue": 0.5,
+        "factors": {
+          "forestCover": 0.2,
+          "nativeSpecies": 0.15,
+          "invasiveSpecies": -0.1
+        },
+        "description": "植物多样性指标"
+      },
+      {
+        "indicatorID": "BIO002",
+        "indicatorName": "AnimalDiversity",
+        "indicatorType": "Animal",
+        "baseValue": 0.5,
+        "factors": {
+          "habitatQuality": 0.2,
+          "speciesCount": 0.15,
+          "huntingPressure": -0.1
+        },
+        "description": "动物多样性指标"
+      },
+      {
+        "indicatorID": "BIO003",
+        "indicatorName": "EcosystemHealth",
+        "indicatorType": "Ecosystem",
+        "baseValue": 0.5,
+        "factors": {
+          "foodChain": 0.15,
+          "nutrientCycle": 0.1,
+          "disturbance": -0.2
+        },
+        "description": "生态系统健康指标"
+      }
+    ],
+    "sustainabilityMetrics": [
+      {
+        "metricID": "SUS001",
+        "metricName": "ResourceRenewal",
+        "metricType": "Resource",
+        "baseValue": 0.5,
+        "factors": {
+          "renewableEnergy": 0.2,
+          "sustainableHarvesting": 0.15,
+          "wasteRecycling": 0.1
+        },
+        "description": "资源更新可持续性指标"
+      },
+      {
+        "metricID": "SUS002",
+        "metricName": "EnvironmentalBalance",
+        "metricType": "Balance",
+        "baseValue": 0.5,
+        "factors": {
+          "carbonNeutral": 0.2,
+          "waterBalance": 0.15,
+          "nutrientBalance": 0.1
+        },
+        "description": "环境平衡可持续性指标"
+      },
+      {
+        "metricID": "SUS003",
+        "metricName": "SocialEquity",
+        "metricType": "Social",
+        "baseValue": 0.5,
+        "factors": {
+          "resourceAccess": 0.15,
+          "environmentalJustice": 0.1,
+          "futureGenerations": 0.1
+        },
+        "description": "社会公平可持续性指标"
+      }
+    ],
+    "environmentalCalculationRules": [
+      {
+        "ruleID": "ENVCAL001",
+        "ruleName": "QualityCalculation",
+        "formula": "baseQuality + sum(factorModifiers) - pollutionLevel",
+        "description": "环境质量计算公式"
+      },
+      {
+        "ruleID": "ENVCAL002",
+        "ruleName": "BiodiversityCalculation",
+        "formula": "average(biodiversityIndicators)",
+        "description": "生物多样性计算"
+      },
+      {
+        "ruleID": "ENVCAL003",
+        "ruleName": "SustainabilityCalculation",
+        "formula": "average(sustainabilityMetrics)",
+        "description": "可持续性计算"
+      },
+      {
+        "ruleID": "ENVCAL004",
+        "ruleName": "PollutionCalculation",
+        "formula": "sum(pollutionEffects) / pollutionTypes",
+        "description": "污染水平计算"
+      }
+    ]
+  }
+} 
